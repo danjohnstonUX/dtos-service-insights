@@ -1,0 +1,87 @@
+.chart-number {
+  font-size: 0.5rem;
+  font-weight: bold;
+  line-height: 1;
+  text-anchor: middle;
+}
+
+.chart-label {
+  font-size: 0.2rem;
+  text-anchor: middle;
+}
+
+.donut circle {
+  -moz-transform: translateY(-0.1em);
+  -ms-transform: translateY(-0.1em);
+  -webkit-transform: translateY(-0.1em);
+  transform: translateY(-0.1em);
+}
+
+.donut-figure {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: -12px!important;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .donut-figure {
+    flex-direction: column;
+  }
+}
+
+.figure-content,
+.figure-key {
+  flex: 1;
+  align-self: center;
+}
+
+.figure-content svg {
+  display: block;
+  margin: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Bar Graphs */
+
+.bar-graph-container {
+    display: flex;
+}
+
+.bar-graph-grey {
+    background-color: $color-nhsuk-grey-4;
+    height: auto;
+}
+
+.bar-graph-amber {
+    flex: 1;
+    background-color: $color-nhsuk-warm-yellow; 
+    color: $color-nhsuk-black;
+    span {
+        float: right;
+        margin-right: 1rem;
+    }
+}
+
+.bar-graph-green {
+    flex: 1;
+    background-color: $color-nhsuk-green; 
+    color: $color-nhsuk-white;
+    span {
+        float: right;
+        margin-right: 1rem;
+    }
+}

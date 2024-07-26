@@ -1,0 +1,324 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Version 1 - Service Insights prototype
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-l">
+            Breast screening performance by screening service
+        </h1>
+
+        <div class="nhsuk-form-group" style="float:right;">
+            <label class="nhsuk-label nhsuk-label--s" for="select-1">
+              Filter screening data
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1">Uptake by region</option>
+              <option value="2" selected>Uptake by screening service</option>
+              <option value="3">Uptake by ICB</option>
+              <option value="4">Uptake by Ethnicity</option>
+              <option value="5">Coverage by region</option>
+              <option value="6">Coverage by local authority</option>
+              <option value="7">Coverage by Ethnicity</option>
+
+            </select>
+          </div>
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-3">
+            <caption class="nhsuk-table__caption nhsuk-table__caption-m">Worst performers</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                        Screening service
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        NHS region
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Performance
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>Central & East London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>46.6%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>South Birmingham
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>Midlands
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>53.1%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>West of London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>54.7%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>South East London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>55.2%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>North London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>55.6%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>Pennine
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>North East and Yorkshire
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>58.3%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>City, Sandwell & Walsall
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>Midlands
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>58.6%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>South West London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>58.7%
+                    </td>
+                </tr>
+                
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>Brighton
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>South East
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>58.9%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>Manchester
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>North West
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>59.8%
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="nhsuk-u-margin-bottom-7"><a href="#">View more</a></p>
+
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-3">
+            <caption class="nhsuk-table__caption nhsuk-table__caption-m">Best performers</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                        Screening service
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        NHS region
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Performance
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>North Nottinghamshire
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>Midlands
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>79.4%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>West Suffolk
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>East of England
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>77.3%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>East Suffolk
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>East of England
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>77.1%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>North Derbyshire & Chesterfield
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>Midlands
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>75.4%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>South Lancashire
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>North West
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>74.0%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>Aylesbury & Wycombe
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>South East
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>73.9%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>King's Lynn
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>East of England
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>73.3%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>Maidstone
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>South East
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>73.1%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>North Yorkshire
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>North East and Yorkshire
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>72.7%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Screening service </span>West Berkshire
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>South East
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Performance </span>72.6%
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="#">View more</a></p>
+
+    </div>
+</div>
+
+{% endblock %}

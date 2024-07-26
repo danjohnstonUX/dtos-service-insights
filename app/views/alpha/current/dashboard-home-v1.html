@@ -1,0 +1,234 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Version 1 - Service Insights prototype
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-l">
+            Screening data hub
+        </h1>
+    </div>
+</div>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Bowel
+                    <span class="nhsuk-caption-m">National uptake</span>
+                </h2>
+                <figure class="donut-figure">
+                    <div class="figure-content">
+                        <svg width="66%" height="66%" viewBox="0 0 42 44" class="donut">
+                            <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#d2d3d4" stroke-width="6"></circle>
+
+                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#007f3b" stroke-width="6" stroke-dasharray="67 33" stroke-dashoffset="25">
+                            </circle>
+                            <text x="50%" y="50%" class="chart-number">
+                                67.0%
+                            </text>
+                        </svg>
+                    </div>
+                    <figcaption class="figure-key">
+                        <p class="sr-only">Figure showing that the national uptake for bowel screening is currently 67 percent, and that the acceptable threshold for this figure is 52 percent. </p>
+                    </figcaption>
+                </figure>
+                <p class="nhsuk-body-s">Acceptable threshold = 52%</p>
+            </div>
+        </div>
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Breast
+                    <span class="nhsuk-caption-m">National uptake</span>
+                </h2>
+                <figure class="donut-figure">
+                    <div class="figure-content">
+                        <svg width="66%" height="66%" viewBox="0 0 42 44" class="donut">
+                            <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#d2d3d4" stroke-width="6"></circle>
+
+                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#ffb81C" stroke-width="6" stroke-dasharray="64.6 35.4" stroke-dashoffset="25">
+                            </circle>
+                            <text x="50%" y="50%" class="chart-number">
+                                64.6%
+                            </text>
+                        </svg>
+                    </div>
+                    <figcaption class="figure-key">
+                        <p class="sr-only">Figure showing that the national uptake for breast screening is currently 64.6 percent, and that the acceptable threshold for this figure is 70 percent. </p>
+                    </figcaption>
+                </figure>
+                <p class="nhsuk-body-s">Acceptable threshold = 70%</p>
+            </div>
+        </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Diabetic eye
+                    <span class="nhsuk-caption-m">National uptake</span>
+                </h2>
+                <figure class="donut-figure">
+                    <div class="figure-content">
+                        <svg width="66%" height="66%" viewBox="0 0 42 44" class="donut">
+                            <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#d2d3d4" stroke-width="6"></circle>
+
+                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#007f3b" stroke-width="6" stroke-dasharray="79.1 20.9" stroke-dashoffset="25">
+                            </circle>
+                            <text x="50%" y="50%" class="chart-number">
+                                79.1%
+                            </text>
+                        </svg>
+                    </div>
+                    <figcaption class="figure-key">
+                        <p class="sr-only">Figure showing that the national uptake for bowel screening is currently 79.1 percent, and that the acceptable threshold for this figure is 75 percent. </p>
+                    </figcaption>
+                </figure>
+                <p class="nhsuk-body-s">Acceptable threshold = 75%</p>
+            </div>
+        </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Bowel
+                    <span class="nhsuk-caption-m">Regional uptake</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 52.3%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">52.3%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 47.7%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">West London</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 52.7%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">52.7%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 47.3%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">North East London</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 54.7%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">52.7%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 45.3%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Kings</p>
+            </div>
+        </div>
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Breast
+                    <span class="nhsuk-caption-m">Regional uptake</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 46.6%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">46.6%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 53.4%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Central and East London</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 53.1%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">53.1%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 46.9%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">South Birmingham</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 54.7%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">54.7%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 45.3%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">West of London</p>
+            </div>
+        </div>
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Diabetic eye
+                    <span class="nhsuk-caption-m">Regional uptake</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 66.1%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">66.1%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 33.9%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Birmingham, Solihull and Black Country</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 68.8%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">68.8%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 31.2%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Bedfordshire</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 69.3%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">69.3%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 30.7%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Oxfordshire</p>
+            </div>
+        </div>
+    </li>
+</ul>
+{% endblock %}
