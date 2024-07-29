@@ -1,0 +1,253 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Service Insights prototype
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{{ breadcrumb({
+items: [
+{
+href: "../dashboard-home",
+text: "Home"
+},
+{
+href: "../breast-index",
+text: "Breast screening"
+}
+],
+href: "#",
+text: "Coverage by screening region"
+}) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-7">
+            Coverage by screening region
+            <span class="nhsuk-caption-l">Breast screening</span>
+        </h1>
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-3">
+            <caption class="nhsuk-table__caption nhsuk-table__caption-m"><span class="nhsuk-u-visually-hidden">Coverage by region</span></caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                        NHS region
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Eligible population
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Participants screened
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Coverage
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>South East
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>1,028,116
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>723,160
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>70.3%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>South West
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>729,069
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>512,574
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>70.3%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>East Midlands
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>606,290
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>414,584
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>68.4%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>North East
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>396,358
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>270,243
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>68.2%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>East of
+                        England
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>735,803
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>497,335
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>67.6%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>Yorkshire and
+                        the Humber
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>632,448
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>427,414
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>67.6%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>West Midlands
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>671,732
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>441,029
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>65.7%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>North West
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>795,170
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>519,704
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>65.4%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>London
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>890,779
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>497,685
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>55.9%
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">NHS region </span>England
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Eligible
+                            population</span>6,485,765
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Participants screened
+                        </span>4,303,727
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Coverage </span>66.4%
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+    $(document).on('change', '#select-data-type', function() {
+    var value = $(this).val();
+    if (isNaN(value)) {
+        $('#select-data-type-btn').attr('href', value);
+    } else {
+        return false;
+    }
+});
+</script>
+{% endblock %}

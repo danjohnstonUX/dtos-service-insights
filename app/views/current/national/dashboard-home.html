@@ -1,0 +1,352 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Version 1 - Service Insights prototype
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-l">
+            Screening data hub
+        </h1>
+        <h2 class="nhsuk-heading-m">Uptake statistics</h2>
+    </div>
+</div>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card performance-card__green">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Bowel
+                    <span class="nhsuk-caption-m">National uptake</span>
+                </h2>
+                <p class="nhsuk-heading-l nhsuk-u-font-size-48 nhsuk-u-margin-bottom-1">67.0%<span
+                        class="nhsuk-u-visually-hidden">nationally</span></p>
+                <p class="nhsuk-u-margin-bottom-2">nationally</p>
+                <p class="nhsuk-body-s nhsuk-caption-m">Minimum threshold 52%</p>
+            </div>
+        </div>
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card performance-card__amber">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Breast
+                    <span class="nhsuk-caption-m">National uptake</span>
+                </h2>
+                <p class="nhsuk-heading-l nhsuk-u-font-size-48 nhsuk-u-margin-bottom-1">64.6%<span
+                        class="nhsuk-u-visually-hidden">nationally</span></p>
+                <p class="nhsuk-u-margin-bottom-2">nationally</p>
+                <p class="nhsuk-body-s nhsuk-caption-m">Minimum threshold 70%</p>
+            </div>
+        </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card performance-card__green">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    Diabetic eye
+                    <span class="nhsuk-caption-m">National uptake</span>
+                </h2>
+                <p class="nhsuk-heading-l nhsuk-u-font-size-48 nhsuk-u-margin-bottom-1">79.1%<span
+                        class="nhsuk-u-visually-hidden">nationally</span></p>
+                <p class="nhsuk-u-margin-bottom-2">nationally</p>
+                <p class="nhsuk-body-s nhsuk-caption-m">Minimum threshold 75%</p>
+            </div>
+        </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    <a class="nhsuk-card__link dashboard-link" href="bowel/screening-service-uptake">Screening service
+                        uptake</a>
+                    <span class="nhsuk-caption-m">Bowel</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 52.3%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">52.3%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 47.7%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">West London</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 52.7%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">52.7%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 47.3%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">North East London</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 54.7%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">54.7%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 45.3%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Kings</p>
+            </div>
+        </div>
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    <a class="nhsuk-card__link dashboard-link" href="breast/screening-service-uptake">Screening service
+                        uptake</a>
+                    <span class="nhsuk-caption-m">Breast</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 46.6%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">46.6%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 53.4%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Central and East London</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 53.1%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">53.1%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 46.9%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">South Birmingham</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 54.7%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">54.7%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 45.3%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">West of London</p>
+            </div>
+        </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    <a class="nhsuk-card__link dashboard-link" href="#">Screening service uptake</a>
+                    <span class="nhsuk-caption-m">Diabetic eye</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 66.1%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">66.1%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 33.9%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Birmingham, Solihull and ...</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 68.8%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">68.8%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 31.2%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Bedfordshire</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-amber" style="width: 69.3%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">69.3%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 30.7%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Oxfordshire</p>
+            </div>
+        </div>
+    </li>
+
+</ul>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h2 class="nhsuk-heading-m">Coverage statistics</h2>
+    </div>
+</div>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    <a class="nhsuk-card__link dashboard-link" href="#">Regional coverage</a>
+                    <span class="nhsuk-caption-m">Bowel</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width: 62.1%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">62.1%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 37.9%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">London</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width: 68.0%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">68.0%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 32.0%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">North West</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width:70.1%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">70.1%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 29.9%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">Midlands</p>
+            </div>
+        </div>
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    <a class="nhsuk-card__link dashboard-link" href="breast/regional-coverage">Regional coverage</a>
+                    <span class="nhsuk-caption-m">Breast</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width: 55.9%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">55.9%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 44.1%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">London</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width: 65.4%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">65.4%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 34.6%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">North West</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width: 65.7%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">65.7%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 34.3%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">West Midlands</p>
+            </div>
+        </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    <a class="nhsuk-card__link dashboard-link" href="#">Regional coverage</a>
+                    <span class="nhsuk-caption-m">Diabetic eye</span>
+                </h2>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width: 90.8%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">90.8%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 9.2%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">East of England</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width: 91.9%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">91.9%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 8.1%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">North West</p>
+                <div class="bar-graph-container">
+                    <span class="bar-graph bar-graph-blue" style="width: 92.1%">
+                        <span class="nhsuk-body-s nhsuk-u-margin-bottom-0">92.1%</span>
+                    </span>
+                    <span class="bar-graph bar-graph-grey" style="width: 7.9%">
+                    </span>
+                </div>
+                <p class="nhsuk-body-s">North East and Yorkshire</p>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<div class="nhsuk-grid-row" style="display:flex;">
+    <div class="nhsuk-grid-column-one-half" style="flex: 1; display: flex; flex-direction: column;">
+        <h2 class="nhsuk-heading-m">Registration statistics</h2>
+        <div class="nhsuk-card nhsuk-card--clickable" style="flex: 1">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    <a class="nhsuk-card__link dashboard-link" href="#">Breast cancer registrations</a>
+                    <span class="nhsuk-caption-m">Breast</span>
+                </h2>
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-full">
+                        <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0" style="display: block;">All ages</p>
+                    </div>
+                    <div class="nhsuk-grid-column-one-third">
+                        <p><span class="nhsuk-u-font-weight-bold nhsuk-body-l nhsuk-u-margin-bottom-1">16,700</span><span class="nhsuk-caption-m">365 days</span></p>
+                    </div>
+                    <div class="nhsuk-grid-column-one-third">
+                        <p><span class="nhsuk-u-font-weight-bold nhsuk-body-l nhsuk-u-margin-bottom-1">1,250</span><span class="nhsuk-caption-m">28 days</span></p>
+                    </div>
+                    <div class="nhsuk-grid-column-one-third">
+                        <p><span class="nhsuk-u-font-weight-bold nhsuk-body-l nhsuk-u-margin-bottom-1">300</span><span class="nhsuk-caption-m">7 days</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nhsuk-grid-column-one-half" style="flex: 1; display: flex; flex-direction: column;">
+        <h2 class="nhsuk-heading-m">Detection statistics</h2>
+        <div class="nhsuk-card nhsuk-card--clickable" style="flex: 1">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-xs">
+                    <a class="nhsuk-card__link dashboard-link" href="#">Participant cancers detected</a>
+                    <span class="nhsuk-caption-m">Breast</span>
+                </h2>
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-one-half">
+                        <p><span class="nhsuk-u-font-weight-bold" style="display: block;">Ages 50 to 69</span><span class="nhsuk-u-font-weight-bold nhsuk-body-l nhsuk-u-margin-bottom-1">1,800</span><span class="nhsuk-caption-m">28 days</span></p>
+                    </div>
+                    <div class="nhsuk-grid-column-one-half">
+                        <p><span class="nhsuk-u-font-weight-bold" style="display: block;">All ages</span><span class="nhsuk-u-font-weight-bold nhsuk-body-l nhsuk-u-margin-bottom-1">3,800</span><span class="nhsuk-caption-m">28 days</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

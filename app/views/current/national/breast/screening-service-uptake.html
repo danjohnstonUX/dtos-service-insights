@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Version 1 - Service Insights prototype
+Service Insights prototype
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -21,8 +21,8 @@ Version 1 - Service Insights prototype
         text: "Home"
       },
       {
-        href: "#",
-        text: "Bowel home"
+        href: "../breast-index",
+        text: "Breast screening"
       }
     ],
     href: "#",
@@ -41,25 +41,10 @@ Version 1 - Service Insights prototype
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-        <h1 class="nhsuk-heading-l">
-            Bowel screening performance by screening service
-        </h1>
-
-        <div class="nhsuk-form-group" style="float:right;">
-            <label class="nhsuk-label nhsuk-label--s" for="select-1">
-              Filter screening data
-            </label>
-            <select class="nhsuk-select" id="select-1" name="select-1">
-              <option value="1">Uptake by region</option>
-              <option value="2" selected>Uptake by screening service</option>
-              <option value="3">Uptake by ICB</option>
-              <option value="4">Uptake by Ethnicity</option>
-              <option value="5">Coverage by region</option>
-              <option value="6">Coverage by local authority</option>
-              <option value="7">Coverage by Ethnicity</option>
-
-            </select>
-          </div>
+        <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-7">
+            Uptake by screening service
+            <span class="nhsuk-caption-l">Breast screening</span>
+        </h1>      
     </div>
 </div>
 
@@ -76,7 +61,7 @@ Version 1 - Service Insights prototype
                         NHS region
                     </th>
                     <th role="columnheader" class="" scope="col">
-                        Performance
+                        Uptake
                     </th>
                 </tr>
             </thead>
@@ -194,7 +179,7 @@ Version 1 - Service Insights prototype
                 </tr>
             </tbody>
         </table>
-        <p class="nhsuk-u-margin-bottom-7"><a href="#">View more</a></p>
+        <p class="nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-9"><a href="#">View more</a></p>
 
     </div>
 </div>
@@ -212,7 +197,7 @@ Version 1 - Service Insights prototype
                         NHS region
                     </th>
                     <th role="columnheader" class="" scope="col">
-                        Performance
+                        Uptake
                     </th>
                 </tr>
             </thead>
@@ -329,9 +314,21 @@ Version 1 - Service Insights prototype
                 </tr>
             </tbody>
         </table>
-        <p><a href="#">View more</a></p>
+        <p class="nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-3"><a href="#">View more</a></p>
 
     </div>
 </div>
 
+{% endblock %}
+{% block pageScripts %}
+<script>
+    $(document).on('change', '#select-data-type', function() {
+    var value = $(this).val();
+    if (isNaN(value)) {
+        $('#select-data-type-btn').attr('href', value);
+    } else {
+        return false;
+    }
+});
+</script>
 {% endblock %}

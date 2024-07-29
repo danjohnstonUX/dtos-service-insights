@@ -76,6 +76,16 @@
     }
 }
 
+.bar-graph-blue {
+    flex: 1;
+    background-color: $color-nhsuk-blue; 
+    color: $color-nhsuk-white;
+    span {
+        float: right;
+        margin-right: 1rem;
+    }
+}
+
 .bar-graph-green {
     flex: 1;
     background-color: $color-nhsuk-green; 

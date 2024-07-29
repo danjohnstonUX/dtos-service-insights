@@ -1,0 +1,102 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Service Insights prototype
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{{ breadcrumb({
+items: [
+{
+href: "dashboard-home",
+text: "Home"
+}
+],
+href: "#",
+text: "Breast screening"
+}) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-xl">
+            Breast screening
+            <span class="nhsuk-caption-xl">Data directory</span>
+
+        </h1>
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <h2>Uptake data</h2>
+        <ul class="nhsuk-list">
+            <li><a href="#">Uptake by age</a></li>
+            <li><a href="breast/ethnicity-uptake">Uptake by ethnicity</a></li>
+            <li><a href="#">Uptake by invitation type</a></li>
+            <li><a href="#">Uptake by screening region</a></li>
+            <li><a href="breast/screening-service-uptake">Uptake by screening service</a></li>
+        </ul>
+
+        <h2>Coverage data</h2>
+        <ul class="nhsuk-list">
+            <li><a href="#">Coverage by age</a></li>
+            <li><a href="#">Coverage by ethnicity</a></li>
+            <li><a href="breast/regional-coverage">Coverage by screening region</a></li>
+            <li><a href="#">Coverage by screening service</a></li>
+        </ul>
+
+        <h2>Registration data</h2>
+        <ul class="nhsuk-list">
+            <li><a href="#">Deaths per 100,000 population</a></li>
+            <li><a href="#">Total deaths</a></li>
+        </ul>
+
+        <h2>Detection data</h2>
+        <ul class="nhsuk-list">
+            <li><a href="#">Breast cancer registrations</a></li>
+            <li><a href="#">Breast cancer registrations per 100,000 population</a></li>
+        </ul>
+
+        <h2>Mortality data</h2>
+        <ul class="nhsuk-list">
+            <li><a href="#">Deaths per 100,000 population</a></li>
+            <li><a href="#">Total deaths</a></li>
+        </ul>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+    $(document).on('change', '#select-data-type', function () {
+        var value = $(this).val();
+        if (isNaN(value)) {
+            $('#select-data-type-btn').attr('href', value);
+        } else {
+            return false;
+        }
+    });
+</script>
+{% endblock %}
